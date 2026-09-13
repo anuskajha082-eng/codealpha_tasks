@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Music Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <!-- MIDI Writer -->
+    <script src="https://cdn.jsdelivr.net/npm/midi-writer-js@3.1.1/build/MidiWriter.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎵 AI Music Generator</h1>
+
+        <p class="subtitle">
+            Generate music using an AI-inspired LSTM model
+        </p>
+
+        <div class="music-card">
+
+            <div class="ai-status">
+                🤖 <span id="modelStatus">AI Model Ready</span>
+            </div>
+
+            <label for="tempo">
+                🎚️ Tempo: <span id="tempoValue">120 BPM</span>
+            </label>
+
+            <input
+                type="range"
+                id="tempo"
+                min="60"
+                max="180"
+                value="120"
+            >
+
+            <div class="buttons">
+
+                <button onclick="trainModel()">
+                    🧠 Train AI
+                </button>
+
+                <button onclick="generateMusic()">
+                    ✨ Generate Music
+                </button>
+
+                <button onclick="playMusic()">
+                    ▶️ Play
+                </button>
+
+                <button onclick="stopMusic()">
+                    ⏹️ Stop
+                </button>
+
+            </div>
+
+            <div class="notes-box">
+
+                <h3>🎼 Generated Notes</h3>
+
+                <p id="notes">
+                    Train the AI model and generate music...
+                </p>
+
+            </div>
+
+            <button
+                class="download-btn"
+                onclick="downloadMusic()"
+            >
+                ⬇️ Download MIDI
+            </button>
+
+            <p id="status">
+                Ready 🎶
+            </p>
+
+        </div>
+
+        <footer>
+            CodeAlpha Artificial Intelligence Internship
+            <br>
+            Task 3 — Music Generation with AI
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html
