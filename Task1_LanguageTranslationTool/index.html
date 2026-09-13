@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Language Translation Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>✦ Language Translation Tool</h1>
+
+        <p class="subtitle">
+            Translate your text into different languages
+        </p>
+
+        <div class="translator">
+
+            <!-- Input Section -->
+            <div class="box">
+
+                <label>Enter Text</label>
+
+                <textarea
+                    id="inputText"
+                    placeholder="Type your text here..."
+                ></textarea>
+
+                <select id="fromLanguage">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="bn">Bengali</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                </select>
+
+            </div>
+
+
+            <!-- Arrow -->
+            <div class="arrow">
+                ⇄
+            </div>
+
+
+            <!-- Output Section -->
+            <div class="box">
+
+                <label>Translated Text</label>
+
+                <div id="outputText" class="output">
+                    Translation will appear here...
+                </div>
+
+                <select id="toLanguage">
+                    <option value="hi">Hindi</option>
+                    <option value="en">English</option>
+                    <option value="bn">Bengali</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- Translate Button -->
+
+        <button id="translateButton" onclick="translateText()">
+            ✦ TRANSLATE
+        </button>
+
+        <p id="status"></p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
